@@ -12,12 +12,14 @@
 
 ## 0. ANTES de clase (5 min, en casa)
 
-1. **Token de GitHub** para poder clonar/subir desde el PC del laboratorio (el repo es privado):
+1. El repo es **público**: `git clone https://github.com/jcpd4/prac3_ic.git` funciona en cualquier PC
+   **sin contraseña ni token**.
+2. **Token de GitHub** solo para **subir** los resultados (`git push`) desde el laboratorio:
    GitHub → *Settings* → *Developer settings* → *Personal access tokens* → *Tokens (classic)* →
    *Generate new token* → marca `repo` → cópialo en el móvil/notas.
-   (Al hacer `git clone`/`git push`, usuario = `jcpd4`, contraseña = **el token**.)
-2. Plan B si el token falla: descargar el repo como **ZIP** desde la web de GitHub y, al final,
-   subir la carpeta `resultados/` con *Add file → Upload files* (o llevártela en un USB/correo).
+   (Al hacer `git push`: usuario = `jcpd4`, contraseña = **el token**.)
+3. Plan B para subir: la carpeta `resultados/` con *Add file → Upload files* en la web de GitHub
+   (o llevártela en un USB/correo).
 
 ---
 
