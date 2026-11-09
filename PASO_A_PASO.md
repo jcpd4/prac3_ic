@@ -10,6 +10,31 @@
 
 ---
 
+## ⚡ OPCIÓN RÁPIDA: un solo script lo hace todo
+
+En el PC maestro (con los otros 2+ PCs encendidos y con sesión abierta con **el mismo usuario**):
+
+```bash
+git clone https://github.com/jcpd4/prac3_ic.git ~/prac3_ic
+cd ~/prac3_ic && ./hazlo_todo.sh
+```
+
+Solo os pide:
+1. **Las IPs de los otros PCs** (en cada uno: `hostname -I`, la primera).
+2. **La contraseña de cada PC una vez** (para las claves SSH).
+3. Que **enseñéis el hola mundo al profesor** y hagáis captura (sigue solo a los 3 min).
+4. Al final, **usuario `jcpd4` + token** para subir los resultados (si no, deja `~/resultados_prac3.zip`).
+
+Hace solo: instala/comprueba MPI, crea `hosts` (con los núcleos de cada PC), claves SSH, descarga MNIST,
+copia y compila en todos, hola mundo (y si falla prueba sola `--oversubscribe` / la interfaz de red buena),
+info del sistema, Tarea 0, gprof, **calibra las tallas para que todo quepa en ~35 min**, Tarea 3, Tarea 4,
+gráficas y subida. Si se corta, **volved a lanzarlo y sigue donde iba**.
+¿Vais justos? `MINUTOS=20 ./hazlo_todo.sh` (tallas más pequeñas).
+
+Si algo falla, el resto de esta guía explica cada paso por separado para hacerlo a mano.
+
+---
+
 ## 0. ANTES de clase (5 min, en casa)
 
 1. El repo es **público**: `git clone https://github.com/jcpd4/prac3_ic.git` funciona en cualquier PC
