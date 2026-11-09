@@ -1,0 +1,13 @@
+# Binarios y datos (MNIST se descarga con get_dataset.sh)
+tarea4/knn2/build/
+tarea0/vector
+tarea0/matriz
+tarea2/hello_mpi
+tarea3/lidar_seq
+tarea3/lidar_mpi
+tarea3/lidar_prof_O0
+tarea3/lidar_prof_O2
+gmon.out
+hosts
+.DS_Store
+__pycache__/

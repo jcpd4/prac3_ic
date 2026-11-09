@@ -1,0 +1,7 @@
+# Copiad este fichero a ~/prac3_ic/hosts y poned UNA IP por linea
+# (la primera, la del PC desde el que lanzais mpirun).
+# Averiguad la IP de cada PC con:  hostname -I
+# Opcional: "slots=N" = numero de procesos que puede recibir ese nodo.
+192.168.1.10 slots=4
+192.168.1.11 slots=4
+192.168.1.12 slots=4
