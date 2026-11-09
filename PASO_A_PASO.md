@@ -137,7 +137,7 @@ cd ~/prac3_ic
 | Se queda colgado sin salida | Hay varias interfaces de red. Mirad la buena con `ip -br addr` (p. ej. `eno1`) y: `export MPI_EXTRA="--mca btl_tcp_if_include eno1 --mca oob_tcp_if_include eno1"` |
 | `Permission denied (publickey)` | Repetid `ssh-copy-id <IP>` |
 | `orted: command not found` | En ese PC no está Open MPI en el PATH: probad `mpirun --prefix /usr ...` |
-| `No se pudo leer MNIST` en un rank | Falta el dataset en ese PC → paso 1.6 |
+| `No se pudo leer MNIST` en un rank | Falta el dataset en ese PC → pasos 1.5 y 1.6 |
 
 `MPI_EXTRA` lo usan **todos los scripts** de benchmark, así que basta con exportarlo una vez.
 
