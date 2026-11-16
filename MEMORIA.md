@@ -415,13 +415,53 @@ empezar sin los datos) y el `Reduce` (el resultado depende de todos).
 
 ### 5.5 Resultados
 
-📌 Ejecutado con `scripts/bench_tarea3.sh` (n = ⬜, P = ⬜). Copiar la tabla *Tarea 3* de `resultados/tablas.md`.
+Ejecutado con `TALLAS="50000 100000 200000" PROCS="2 3 4 6 8 10" REPS=3 ./scripts/bench_tarea3.sh`
+(n = 50 000, 100 000 y 200 000; P = 2, 3, 4, 6, 8 y 10; 3 repeticiones, se muestra la media).
+Máquina: Apple M4, 10 núcleos (**4 de rendimiento + 6 de eficiencia**), 1 nodo, Open MPI.
+📌 Para la entrega en el clúster del laboratorio (≥ 3 PCs) basta con crear el fichero `hosts` y relanzar
+el mismo script; las conclusiones cualitativas son las mismas, pero el `Bcast` pasará por la red.
 
 | n | Estrategia | P | T (s) | Speed-up | Eficiencia | % tiempo MPI |
 |---|---|---|---|---|---|---|
-| ⬜ | secuencial | 1 | ⬜ | 1,00 | 1,00 | 0 |
-| ⬜ | bloque | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| ⬜ | cíclico | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 50000 | secuencial | 1 | 0,614 | 1,00 | 1,00 | 0 |
+| 50000 | bloque | 2 | 0,484 | 1,27 | 0,63 | 0,4 |
+| 50000 | bloque | 4 | 0,289 | 2,13 | 0,53 | 0,5 |
+| 50000 | bloque | 10 | 0,165 | 3,73 | 0,37 | 3,5 |
+| 50000 | cíclico | 2 | 0,317 | 1,93 | 0,97 | 0,4 |
+| 50000 | cíclico | 4 | 0,173 | 3,56 | 0,89 | 0,9 |
+| 50000 | cíclico | 10 | 0,134 | 4,58 | 0,46 | 21,1 |
+| 100000 | secuencial | 1 | 2,517 | 1,00 | 1,00 | 0 |
+| 100000 | bloque | 2 | 1,921 | 1,31 | 0,66 | 0,1 |
+| 100000 | bloque | 3 | 1,454 | 1,73 | 0,58 | 0,1 |
+| 100000 | bloque | 4 | 1,160 | 2,17 | 0,54 | 0,1 |
+| 100000 | bloque | 6 | 0,881 | 2,86 | 0,48 | 0,1 |
+| 100000 | bloque | 8 | 0,768 | 3,28 | 0,41 | 0,6 |
+| 100000 | bloque | 10 | 0,690 | 3,65 | 0,36 | 0,9 |
+| 100000 | cíclico | 2 | 1,277 | 1,97 | 0,99 | 0,2 |
+| 100000 | cíclico | 3 | 0,865 | 2,91 | 0,97 | 0,2 |
+| 100000 | cíclico | 4 | 0,707 | 3,56 | 0,89 | 0,3 |
+| 100000 | cíclico | 6 | 0,616 | 4,09 | 0,68 | 4,3 |
+| 100000 | cíclico | 8 | 0,561 | 4,49 | 0,56 | 6,3 |
+| 100000 | cíclico | 10 | 0,564 | 4,46 | 0,45 | 7,3 |
+| 200000 | secuencial | 1 | 10,246 | 1,00 | 1,00 | 0 |
+| 200000 | bloque | 2 | 7,972 | 1,29 | 0,64 | 0,0 |
+| 200000 | bloque | 4 | 5,309 | 1,93 | 0,48 | 0,0 |
+| 200000 | bloque | 10 | 3,349 | 3,06 | 0,31 | 0,4 |
+| 200000 | cíclico | 2 | 5,723 | 1,79 | 0,90 | 0,1 |
+| 200000 | cíclico | 4 | 3,294 | 3,11 | 0,78 | 0,1 |
+| 200000 | cíclico | 8 | 2,815 | 3,64 | 0,46 | 0,4 |
+| 200000 | cíclico | 10 | 3,048 | 3,36 | 0,34 | 8,2 |
+
+(Tabla completa con todos los P en `resultados/prueba_local_mac/tablas.md`; datos en bruto en `resultados/prueba_local_mac/tarea3.csv`.)
+En **todas** las ejecuciones la distancia mínima coincide con la secuencial (0,000370 m para
+n = 200 000), lo que valida la paralelización.
+
+**Desequilibrio de carga** (t_cómputo máx / t_cómputo mín entre procesos, media de las 3 tallas):
+
+| P | 2 | 3 | 4 | 6 | 8 | 10 |
+|---|---|---|---|---|---|---|
+| bloque | 2,98 | 4,94 | 6,42 | 8,61 | 11,90 | 14,06 |
+| cíclico | 1,00 | 1,00 | 1,00 | 1,07 | 1,14 | 1,24 |
 
 ![Tarea 3 tiempo](graficas/tarea3_tiempo.png)
 ![Tarea 3 speed-up](graficas/tarea3_speedup.png)
@@ -433,49 +473,67 @@ empezar sin los datos) y el `Reduce` (el resultado depende de todos).
 ### 5.6 Evaluación
 
 **1. Speed-up en función del número de procesos y del tamaño.**
-S(P, n) = T_secuencial(n) / T_paralelo(P, n) (gráficas anteriores). Con reparto cíclico el speed-up
-crece casi linealmente: para n = ⬜ se obtiene S = ⬜ con P = ⬜. Al aumentar n el speed-up se acerca
-más al ideal, porque el cómputo crece como n² y la comunicación solo como n. Con reparto por bloques
-el speed-up es muy inferior (S = ⬜ con P = ⬜) y prácticamente no depende de n, porque lo limita el
-desequilibrio (≈ P²/(2P−1)), no la comunicación.
-*(Prueba previa en un portátil de 4 núcleos, n = 40 000: secuencial 0,384 s; bloque P = 4: 0,187 s
-(S = 2,05); cíclico P = 4: 0,114 s (S = 3,36).)*
+S(P, n) = T_secuencial(n) / T_paralelo(P, n) (gráficas anteriores). Con reparto **cíclico** el speed-up
+es casi lineal mientras hay núcleos de rendimiento libres: S = 1,97 con P = 2, 2,91 con P = 3 y 3,56
+con P = 4 (n = 100 000). A partir de P = 4 la curva se aplana (S = 4,49 con P = 8 y 4,46 con P = 10),
+porque los procesos 5.º a 10.º caen en los núcleos de **eficiencia** del M4, bastante más lentos.
+Con reparto por **bloques** el speed-up es muy inferior (S = 2,17 con P = 4 y 3,65 con P = 10) y
+apenas depende de n, porque lo limita el desequilibrio de carga, no la comunicación: se ajusta al
+límite teórico P²/(2P−1) (1,33 con P = 2 → medido 1,27–1,31; 2,29 con P = 4 → medido 1,93–2,17).
+El tamaño influye poco entre 50 000 y 100 000; con n = 200 000 el speed-up es algo menor porque la
+nube de cada proceso (4,8 MB) ya no cabe holgadamente en la caché L2 compartida cuando hay muchos
+procesos a la vez, y la ejecución larga (≈ 10 s) hace que el chip reduzca frecuencia con todos los
+núcleos activos.
 
 **2. ¿Se obtiene siempre una mejora al aumentar P? ¿Qué limita la escalabilidad?**
-📌 ⬜ (Comentar si hay algún P donde no mejora.) En general sí mejora mientras P ≤ número total de
-núcleos físicos del clúster. Los factores que limitan la escalabilidad son:
-(a) el **desequilibrio de carga** en la estrategia por bloques (gráfica de desequilibrio: t_max/t_min
-≈ ⬜ con bloques frente a ≈ 1,0 con cíclico);
-(b) el **coste del `MPI_Bcast`**, que crece con n y con P (más nodos que reciben por la red) y no se
-reduce al añadir procesos;
-(c) la **parte secuencial** (tareas A y B en P0), pequeña pero constante (ley de Amdahl);
-(d) cuando P supera los núcleos físicos, los procesos compiten por el mismo núcleo y, con varios
-procesos por nodo, por la caché L3 y el ancho de banda de memoria;
-(e) para n pequeño, las latencias de arranque y de red pesan más que el propio cálculo.
+No siempre: con cíclico, pasar de P = 8 a P = 10 no mejora o empeora (n = 100 000: 0,561 → 0,564 s;
+n = 200 000: 2,815 → 3,048 s). Los factores que limitan la escalabilidad son:
+(a) el **desequilibrio de carga** en la estrategia por bloques (t_max/t_min ≈ 6,4 con P = 4 y ≈ 14 con
+P = 10, frente a ≈ 1,0 con cíclico);
+(b) la **heterogeneidad de los núcleos**: aunque el reparto cíclico da a cada proceso el mismo número
+de comparaciones, un proceso en un núcleo de eficiencia tarda más, y todos esperan al más lento en el
+`Reduce` (por eso el desequilibrio cíclico sube a 1,24 con P = 10). En un clúster con nodos distintos
+pasaría lo mismo;
+(c) el **coste del `MPI_Bcast`**, que crece con n y con P y no se reduce al añadir procesos;
+(d) la **parte secuencial** (tareas A y B en P0), pequeña pero constante (ley de Amdahl);
+(e) la **competencia por recursos compartidos** (caché L2, ancho de banda de memoria, frecuencia) cuando
+hay varios procesos en el mismo nodo;
+(f) para n pequeño, las latencias de arranque y sincronización pesan más que el propio cálculo.
 
 **3. Impacto de las comunicaciones.**
-📌 Según la gráfica de comunicación, para n = ⬜ y P = ⬜ el `Bcast` supone ⬜ s (⬜ %) y el `Reduce`
-⬜ s; el resto es cómputo. La comunicación es solo de O(n) datos frente a O(n²) operaciones, por lo que
-su peso es pequeño y disminuye al aumentar n. En la estrategia por bloques, el tiempo del `Reduce`
-incluye la **espera** al proceso más cargado (sincronización): ahí "comunicación" es en realidad
-tiempo ocioso por desequilibrio.
+En un único nodo el `Bcast` es una copia en memoria compartida: ≈ 1–2 ms para n = 200 000 (4,8 MB; 17 ms en el peor caso),
+menos del 0,1 % de un tiempo total de 3–8 s. El `Reduce` de un único `double` es despreciable en sí;
+lo que mide la columna "% tiempo MPI" es sobre todo la **espera** en la sincronización: con cíclico y
+P = 10 llega al 21 % para n = 50 000 y al 8 % para n = 200 000, porque los procesos de los núcleos
+rápidos terminan antes y esperan a los lentos. Es decir, el tiempo "de comunicación" es en realidad
+tiempo ocioso por desequilibrio. Como se comunica O(n) datos frente a O(n²) operaciones, el peso real
+de la comunicación disminuye al crecer n. En el clúster del laboratorio el `Bcast` irá por Ethernet
+(≈ 0,04 s para 4,8 MB a 1 Gb/s y por cada nivel del árbol de difusión), que seguirá siendo pequeño
+frente al cómputo para n ≥ 100 000 pero visible para n = 50 000.
 
-**4. Comparación de estrategias.** El reparto **cíclico** es claramente mejor en todas las
-configuraciones (⬜× más rápido que bloque con P = ⬜), porque equilibra una carga triangular sin
-ningún coste extra de comunicación. El reparto por bloques solo sería adecuado si todas las filas
-costaran lo mismo (o con bloques de tamaño desigual calculados para igualar n(n−1)/2P comparaciones).
+**4. Comparación de estrategias.** El reparto **cíclico** es mejor en todas las configuraciones medidas:
+1,64× más rápido que bloque con P = 4 (n = 100 000: 0,707 s frente a 1,160 s) y 1,61× con P = 4 para
+n = 200 000. La ventaja se reduce al aumentar P (con P = 10, 1,10–1,23×) porque entonces ambas
+estrategias quedan limitadas por los núcleos lentos. El cíclico equilibra la carga triangular sin
+ningún coste extra de comunicación (cada proceso necesita toda la nube en ambos casos). El reparto por
+bloques solo sería adecuado si todas las filas costaran lo mismo, o con bloques de tamaño desigual
+calculados para que cada proceso haga n(n−1)/2P comparaciones.
 
-**5. Ganancia máxima teórica.** Por la ley de Amdahl, con una fracción secuencial f ≈ 0,0035
-(tareas A+B, medido: 0,0084 s de 2,416 s para n = 100 000):
-S_max = 1 / (f + (1−f)/P) → para P = ⬜, S_max = ⬜ (prácticamente P), y el límite asintótico es
-1/f ≈ 290. No se alcanza por: el coste del `Bcast` (no presente en el secuencial), el desequilibrio
-residual, la sincronización y el uso compartido de recursos de cada nodo (caché, memoria, frecuencia
-turbo que baja con todos los núcleos activos).
+**5. Ganancia máxima teórica.** Por la ley de Amdahl, con una fracción secuencial f ≈ 0,0021
+(tareas A+B medidas en el secuencial: 0,0054 s de 2,542 s para n = 100 000):
+S_max = 1 / (f + (1−f)/P) → para P = 4, S_max = 3,97; para P = 10, S_max = 9,81 (prácticamente P), y el
+límite asintótico es 1/f ≈ 470. No se alcanza por: el desequilibrio (total en bloque, residual en
+cíclico por los núcleos heterogéneos), los núcleos de eficiencia (en este equipo, una cota más
+realista es ≈ 4 + 6·0,4 ≈ 6,4 "núcleos de rendimiento equivalentes"), la sincronización del `Reduce`,
+el coste del `Bcast` y el uso compartido de caché, memoria y frecuencia.
 
-**6. Eficiencia secuencial vs paralela.** La eficiencia E = S/P es ⬜ con cíclico para n = ⬜ y P = ⬜
-y baja a ⬜ con bloques. 📌 La versión paralela cíclica es la más eficiente para tamaños grandes; para
-n pequeños (⬜) la eficiencia cae porque el tiempo total es de pocas décimas y la comunicación y el
-arranque pesan más.
+**6. Eficiencia secuencial vs paralela.** La eficiencia E = S/P con cíclico es 0,97–0,99 con P = 2–3 y
+0,89 con P = 4 (n = 50 000 y 100 000), y cae a 0,45 con P = 10. Con bloques nunca supera 0,66 y baja a
+0,31–0,37 con P = 10. La versión secuencial tiene E = 1 por definición, pero es la más lenta en
+todos los casos. La implementación más **eficiente** (mejor relación speed-up/recursos) es la cíclica
+con P = 4 (un proceso por núcleo de rendimiento); la más **rápida** en tiempo absoluto es la cíclica
+con P = 8–10. Para n pequeño (50 000) la eficiencia con P alto cae más (0,46) porque el tiempo total
+es de décimas de segundo y la sincronización y el arranque pesan más.
 
 ---
 

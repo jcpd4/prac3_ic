@@ -1,0 +1,1863 @@
+>>> secuencial n=50000
+=== Deteccion de obstaculo LIDAR ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos ---
+Generacion nube:        0.0020 s
+Centroide + bbox:       0.0001 s
+Orden por profundidad:  0.0027 s
+Par mas cercano:        0.5844 s
+TOTAL (sin generacion): 0.5872 s
+CSV,secuencial,1,50000,0.587234,0,0.584428,0.584428,0,0.001791
+>>> MPI bloque P=2 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0031 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.4720 s  (min 0.1524 / max 0.4720 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.4776 s
+Desequilibrio (max/min computo): 3.10
+CSV,bloque,2,50000,0.477577,0.003099,0.471993,0.152425,0.000021,0.001791
+>>> MPI ciclico P=2 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0013 s
+Tareas A+B (rank 0):     0.0023 s
+Par mas cercano (rank0): 0.3097 s  (min 0.3095 / max 0.3097 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.3134 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,2,50000,0.313354,0.001341,0.309713,0.309493,0.000011,0.001791
+>>> MPI bloque P=3 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0023 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.3589 s  (min 0.0708 / max 0.3589 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.3637 s
+Desequilibrio (max/min computo): 5.07
+CSV,bloque,3,50000,0.363697,0.002255,0.358945,0.070848,0.000012,0.001791
+>>> MPI ciclico P=3 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0013 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.2126 s  (min 0.2123 / max 0.2126 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.2164 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,3,50000,0.216432,0.001337,0.212584,0.212266,0.000013,0.001791
+>>> MPI bloque P=4 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.2836 s  (min 0.0418 / max 0.2836 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.2875 s
+Desequilibrio (max/min computo): 6.78
+CSV,bloque,4,50000,0.287529,0.001398,0.283594,0.041802,0.000010,0.001791
+>>> MPI ciclico P=4 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0017 s
+Tareas A+B (rank 0):     0.0026 s
+Par mas cercano (rank0): 0.1679 s  (min 0.1675 / max 0.1679 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.1722 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,4,50000,0.172157,0.001660,0.167922,0.167527,0.000011,0.001791
+>>> MPI bloque P=6 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0020 s
+Tareas A+B (rank 0):     0.0029 s
+Par mas cercano (rank0): 0.2092 s  (min 0.0283 / max 0.2092 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.2141 s
+Desequilibrio (max/min computo): 7.39
+CSV,bloque,6,50000,0.214067,0.001967,0.209187,0.028295,0.000010,0.001791
+>>> MPI ciclico P=6 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0002 s
+Tareas A+B (rank 0):     0.0028 s
+Par mas cercano (rank0): 0.1450 s  (min 0.1294 / max 0.1493 entre procesos)
+Reduce + espera:         0.0029 s
+TOTAL (sin generacion):  0.1509 s
+Desequilibrio (max/min computo): 1.15
+CSV,ciclico,6,50000,0.150885,0.000232,0.149330,0.129439,0.002858,0.001791
+>>> MPI bloque P=8 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0043 s
+Tareas A+B (rank 0):     0.0027 s
+Par mas cercano (rank0): 0.1851 s  (min 0.0106 / max 0.1851 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.1921 s
+Desequilibrio (max/min computo): 17.43
+CSV,bloque,8,50000,0.192122,0.004320,0.185073,0.010617,0.000011,0.001791
+>>> MPI ciclico P=8 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0046 s
+Tareas A+B (rank 0):     0.0027 s
+Par mas cercano (rank0): 0.1123 s  (min 0.1093 / max 0.1358 entre procesos)
+Reduce + espera:         0.0209 s
+TOTAL (sin generacion):  0.1404 s
+Desequilibrio (max/min computo): 1.24
+CSV,ciclico,8,50000,0.140383,0.004574,0.135792,0.109263,0.020852,0.001791
+>>> MPI bloque P=10 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0062 s
+Tareas A+B (rank 0):     0.0027 s
+Par mas cercano (rank0): 0.1599 s  (min 0.0125 / max 0.1599 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.1687 s
+Desequilibrio (max/min computo): 12.79
+CSV,bloque,10,50000,0.168694,0.006172,0.159856,0.012496,0.000009,0.001791
+>>> MPI ciclico P=10 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0057 s
+Tareas A+B (rank 0):     0.0028 s
+Par mas cercano (rank0): 0.1138 s  (min 0.1002 / max 0.1265 entre procesos)
+Reduce + espera:         0.0095 s
+TOTAL (sin generacion):  0.1318 s
+Desequilibrio (max/min computo): 1.26
+CSV,ciclico,10,50000,0.131824,0.005717,0.126458,0.100180,0.009539,0.001791
+>>> secuencial n=50000
+=== Deteccion de obstaculo LIDAR ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos ---
+Generacion nube:        0.0018 s
+Centroide + bbox:       0.0001 s
+Orden por profundidad:  0.0025 s
+Par mas cercano:        0.6247 s
+TOTAL (sin generacion): 0.6273 s
+CSV,secuencial,1,50000,0.627259,0,0.624662,0.624662,0,0.001791
+>>> MPI bloque P=2 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.4781 s  (min 0.1572 / max 0.4781 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.4819 s
+Desequilibrio (max/min computo): 3.04
+CSV,bloque,2,50000,0.481944,0.001378,0.478099,0.157183,0.000013,0.001791
+>>> MPI ciclico P=2 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0013 s
+Tareas A+B (rank 0):     0.0023 s
+Par mas cercano (rank0): 0.3145 s  (min 0.3143 / max 0.3145 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.3181 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,2,50000,0.318056,0.001271,0.314450,0.314274,0.000010,0.001791
+>>> MPI bloque P=3 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.3594 s  (min 0.0707 / max 0.3594 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.3634 s
+Desequilibrio (max/min computo): 5.08
+CSV,bloque,3,50000,0.363437,0.001560,0.359368,0.070709,0.000021,0.001791
+>>> MPI ciclico P=3 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0021 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.2122 s  (min 0.2122 / max 0.2123 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.2168 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,3,50000,0.216815,0.002145,0.212339,0.212152,0.000009,0.001791
+>>> MPI bloque P=4 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.2844 s  (min 0.0423 / max 0.2844 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.2883 s
+Desequilibrio (max/min computo): 6.73
+CSV,bloque,4,50000,0.288331,0.001389,0.284413,0.042280,0.000017,0.001791
+>>> MPI ciclico P=4 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.1679 s  (min 0.1678 / max 0.1685 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.1718 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,4,50000,0.171799,0.001401,0.168521,0.167799,0.000008,0.001791
+>>> MPI bloque P=6 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0017 s
+Tareas A+B (rank 0):     0.0026 s
+Par mas cercano (rank0): 0.2128 s  (min 0.0300 / max 0.2128 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.2171 s
+Desequilibrio (max/min computo): 7.10
+CSV,bloque,6,50000,0.217070,0.001651,0.212804,0.029975,0.000009,0.001791
+>>> MPI ciclico P=6 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0027 s
+Par mas cercano (rank0): 0.1462 s  (min 0.1332 / max 0.1470 entre procesos)
+Reduce + espera:         0.0013 s
+TOTAL (sin generacion):  0.1518 s
+Desequilibrio (max/min computo): 1.10
+CSV,ciclico,6,50000,0.151803,0.001636,0.147012,0.133154,0.001282,0.001791
+>>> MPI bloque P=8 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0045 s
+Tareas A+B (rank 0):     0.0029 s
+Par mas cercano (rank0): 0.1766 s  (min 0.0174 / max 0.1766 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.1841 s
+Desequilibrio (max/min computo): 10.16
+CSV,bloque,8,50000,0.184051,0.004526,0.176627,0.017391,0.000016,0.001791
+>>> MPI ciclico P=8 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0052 s
+Tareas A+B (rank 0):     0.0028 s
+Par mas cercano (rank0): 0.1151 s  (min 0.0981 / max 0.1396 entre procesos)
+Reduce + espera:         0.0217 s
+TOTAL (sin generacion):  0.1448 s
+Desequilibrio (max/min computo): 1.42
+CSV,ciclico,8,50000,0.144816,0.005226,0.139590,0.098103,0.021697,0.001791
+>>> MPI bloque P=10 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0058 s
+Tareas A+B (rank 0):     0.0027 s
+Par mas cercano (rank0): 0.1597 s  (min 0.0099 / max 0.1597 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.1681 s
+Desequilibrio (max/min computo): 16.10
+CSV,bloque,10,50000,0.168143,0.005764,0.159664,0.009914,0.000009,0.001791
+>>> MPI ciclico P=10 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0034 s
+Tareas A+B (rank 0):     0.0028 s
+Par mas cercano (rank0): 0.1087 s  (min 0.0930 / max 0.1288 entre procesos)
+Reduce + espera:         0.0173 s
+TOTAL (sin generacion):  0.1322 s
+Desequilibrio (max/min computo): 1.39
+CSV,ciclico,10,50000,0.132194,0.003376,0.128817,0.092966,0.017306,0.001791
+>>> secuencial n=50000
+=== Deteccion de obstaculo LIDAR ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos ---
+Generacion nube:        0.0017 s
+Centroide + bbox:       0.0001 s
+Orden por profundidad:  0.0025 s
+Par mas cercano:        0.6244 s
+TOTAL (sin generacion): 0.6269 s
+CSV,secuencial,1,50000,0.626881,0,0.624350,0.624350,0,0.001791
+>>> MPI bloque P=2 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0019 s
+Tareas A+B (rank 0):     0.0038 s
+Par mas cercano (rank0): 0.4867 s  (min 0.1663 / max 0.4867 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.4923 s
+Desequilibrio (max/min computo): 2.93
+CSV,bloque,2,50000,0.492336,0.001870,0.486683,0.166272,0.000014,0.001791
+>>> MPI ciclico P=2 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.3166 s  (min 0.3163 / max 0.3166 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.3205 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,2,50000,0.320455,0.001380,0.316599,0.316321,0.000013,0.001791
+>>> MPI bloque P=3 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0024 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.3611 s  (min 0.0713 / max 0.3611 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.3659 s
+Desequilibrio (max/min computo): 5.07
+CSV,bloque,3,50000,0.365945,0.002372,0.361062,0.071274,0.000017,0.001791
+>>> MPI ciclico P=3 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0026 s
+Par mas cercano (rank0): 0.2281 s  (min 0.2260 / max 0.2281 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.2323 s
+Desequilibrio (max/min computo): 1.01
+CSV,ciclico,3,50000,0.232306,0.001629,0.228112,0.225988,0.000011,0.001791
+>>> MPI bloque P=4 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.2860 s  (min 0.0432 / max 0.2860 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.2899 s
+Desequilibrio (max/min computo): 6.62
+CSV,bloque,4,50000,0.289884,0.001353,0.286002,0.043218,0.000018,0.001791
+>>> MPI ciclico P=4 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0015 s
+Tareas A+B (rank 0):     0.0025 s
+Par mas cercano (rank0): 0.1695 s  (min 0.1691 / max 0.1700 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.1736 s
+Desequilibrio (max/min computo): 1.01
+CSV,ciclico,4,50000,0.173596,0.001500,0.169983,0.169067,0.000010,0.001791
+>>> MPI bloque P=6 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0028 s
+Par mas cercano (rank0): 0.2130 s  (min 0.0187 / max 0.2130 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.2172 s
+Desequilibrio (max/min computo): 11.39
+CSV,bloque,6,50000,0.217214,0.001410,0.212985,0.018706,0.000028,0.001791
+>>> MPI ciclico P=6 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0015 s
+Tareas A+B (rank 0):     0.0027 s
+Par mas cercano (rank0): 0.1472 s  (min 0.1324 / max 0.1472 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.1514 s
+Desequilibrio (max/min computo): 1.11
+CSV,ciclico,6,50000,0.151449,0.001545,0.147195,0.132420,0.000009,0.001791
+>>> MPI bloque P=8 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0049 s
+Tareas A+B (rank 0):     0.0026 s
+Par mas cercano (rank0): 0.1657 s  (min 0.0191 / max 0.1657 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.1733 s
+Desequilibrio (max/min computo): 8.67
+CSV,bloque,8,50000,0.173319,0.004910,0.165748,0.019110,0.000013,0.001791
+>>> MPI ciclico P=8 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0047 s
+Tareas A+B (rank 0):     0.0028 s
+Par mas cercano (rank0): 0.1270 s  (min 0.1105 / max 0.1336 entre procesos)
+Reduce + espera:         0.0038 s
+TOTAL (sin generacion):  0.1383 s
+Desequilibrio (max/min computo): 1.21
+CSV,ciclico,8,50000,0.138279,0.004664,0.133595,0.110547,0.003845,0.001791
+>>> MPI bloque P=10 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto bloque) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0055 s
+Tareas A+B (rank 0):     0.0028 s
+Par mas cercano (rank0): 0.1485 s  (min 0.0139 / max 0.1485 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.1568 s
+Desequilibrio (max/min computo): 10.69
+CSV,bloque,10,50000,0.156838,0.005516,0.148550,0.013900,0.000013,0.001791
+>>> MPI ciclico P=10 n=50000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto ciclico) ===
+Puntos analizados: 50000
+Centroide: (0.01, 1.00, 15.00) m
+Bounding box: ancho=12.83 m, alto=5.99 m, profundidad=3.84 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0018 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0053 s
+Tareas A+B (rank 0):     0.0027 s
+Par mas cercano (rank0): 0.0864 s  (min 0.0864 / max 0.1326 entre procesos)
+Reduce + espera:         0.0435 s
+TOTAL (sin generacion):  0.1380 s
+Desequilibrio (max/min computo): 1.54
+CSV,ciclico,10,50000,0.137971,0.005317,0.132639,0.086403,0.043545,0.001791
+>>> secuencial n=100000
+=== Deteccion de obstaculo LIDAR ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos ---
+Generacion nube:        0.0036 s
+Centroide + bbox:       0.0001 s
+Orden por profundidad:  0.0053 s
+Par mas cercano:        2.5369 s
+TOTAL (sin generacion): 2.5423 s
+CSV,secuencial,1,100000,2.542344,0,2.536870,2.536870,0,0.000408
+>>> MPI bloque P=2 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0015 s
+Tareas A+B (rank 0):     0.0055 s
+Par mas cercano (rank0): 1.9168 s  (min 0.6349 / max 1.9168 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.9239 s
+Desequilibrio (max/min computo): 3.02
+CSV,bloque,2,100000,1.923853,0.001535,1.916804,0.634919,0.000018,0.000408
+>>> MPI ciclico P=2 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0017 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 1.2753 s  (min 1.2753 / max 1.2760 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.2823 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,2,100000,1.282289,0.001693,1.276008,1.275310,0.000013,0.000408
+>>> MPI bloque P=3 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0015 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 1.4389 s  (min 0.2838 / max 1.4389 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.4457 s
+Desequilibrio (max/min computo): 5.07
+CSV,bloque,3,100000,1.445681,0.001500,1.438890,0.283753,0.000018,0.000408
+>>> MPI ciclico P=3 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 0.8502 s  (min 0.8502 / max 0.8502 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.8570 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,3,100000,0.857018,0.001552,0.850208,0.850155,0.000012,0.000408
+>>> MPI bloque P=4 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0020 s
+Tareas A+B (rank 0):     0.0054 s
+Par mas cercano (rank0): 1.1414 s  (min 0.1710 / max 1.1414 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.1487 s
+Desequilibrio (max/min computo): 6.67
+CSV,bloque,4,100000,1.148741,0.001950,1.141397,0.171003,0.000019,0.000408
+>>> MPI ciclico P=4 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 0.6825 s  (min 0.6824 / max 0.6852 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.6892 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,4,100000,0.689173,0.001417,0.685151,0.682390,0.000012,0.000408
+>>> MPI bloque P=6 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0001 s
+Tareas A+B (rank 0):     0.0061 s
+Par mas cercano (rank0): 0.8614 s  (min 0.0956 / max 0.8614 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.8676 s
+Desequilibrio (max/min computo): 9.01
+CSV,bloque,6,100000,0.867597,0.000083,0.861373,0.095628,0.000019,0.000408
+>>> MPI ciclico P=6 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0012 s
+Tareas A+B (rank 0):     0.0057 s
+Par mas cercano (rank0): 0.5741 s  (min 0.5581 / max 0.5967 entre procesos)
+Reduce + espera:         0.0191 s
+TOTAL (sin generacion):  0.6000 s
+Desequilibrio (max/min computo): 1.07
+CSV,ciclico,6,100000,0.600013,0.001168,0.596710,0.558054,0.019055,0.000408
+>>> MPI bloque P=8 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0041 s
+Tareas A+B (rank 0):     0.0057 s
+Par mas cercano (rank0): 0.7245 s  (min 0.0627 / max 0.7245 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.7344 s
+Desequilibrio (max/min computo): 11.56
+CSV,bloque,8,100000,0.734361,0.004075,0.724533,0.062681,0.000017,0.000408
+>>> MPI ciclico P=8 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0049 s
+Tareas A+B (rank 0):     0.0054 s
+Par mas cercano (rank0): 0.5325 s  (min 0.4805 / max 0.5364 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.5427 s
+Desequilibrio (max/min computo): 1.12
+CSV,ciclico,8,100000,0.542741,0.004855,0.536402,0.480506,0.000010,0.000408
+>>> MPI bloque P=10 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0053 s
+Tareas A+B (rank 0):     0.0065 s
+Par mas cercano (rank0): 0.6655 s  (min 0.0426 / max 0.6655 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.6773 s
+Desequilibrio (max/min computo): 15.61
+CSV,bloque,10,100000,0.677334,0.005283,0.665533,0.042645,0.000016,0.000408
+>>> MPI ciclico P=10 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0047 s
+Tareas A+B (rank 0):     0.0069 s
+Par mas cercano (rank0): 0.5181 s  (min 0.4329 / max 0.5615 entre procesos)
+Reduce + espera:         0.0364 s
+TOTAL (sin generacion):  0.5662 s
+Desequilibrio (max/min computo): 1.30
+CSV,ciclico,10,100000,0.566217,0.004744,0.561459,0.432930,0.036450,0.000408
+>>> secuencial n=100000
+=== Deteccion de obstaculo LIDAR ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos ---
+Generacion nube:        0.0037 s
+Centroide + bbox:       0.0001 s
+Orden por profundidad:  0.0056 s
+Par mas cercano:        2.5054 s
+TOTAL (sin generacion): 2.5111 s
+CSV,secuencial,1,100000,2.511137,0,2.505421,2.505421,0,0.000408
+>>> MPI bloque P=2 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0018 s
+Tareas A+B (rank 0):     0.0052 s
+Par mas cercano (rank0): 1.9121 s  (min 0.6310 / max 1.9121 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.9192 s
+Desequilibrio (max/min computo): 3.03
+CSV,bloque,2,100000,1.919224,0.001828,1.912132,0.631029,0.000022,0.000408
+>>> MPI ciclico P=2 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0028 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 1.2629 s  (min 1.2629 / max 1.2635 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.2710 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,2,100000,1.270962,0.002760,1.263455,1.262893,0.000011,0.000408
+>>> MPI bloque P=3 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 1.4403 s  (min 0.2842 / max 1.4403 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.4473 s
+Desequilibrio (max/min computo): 5.07
+CSV,bloque,3,100000,1.447289,0.001591,1.440336,0.284213,0.000024,0.000408
+>>> MPI ciclico P=3 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0015 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 0.8529 s  (min 0.8517 / max 0.8529 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.8597 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,3,100000,0.859711,0.001521,0.852854,0.851742,0.000013,0.000408
+>>> MPI bloque P=4 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0017 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 1.1464 s  (min 0.1748 / max 1.1464 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.1534 s
+Desequilibrio (max/min computo): 6.56
+CSV,bloque,4,100000,1.153401,0.001672,1.146425,0.174759,0.000025,0.000408
+>>> MPI ciclico P=4 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 0.6952 s  (min 0.6947 / max 0.6958 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.7021 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,4,100000,0.702143,0.001594,0.695838,0.694716,0.000013,0.000408
+>>> MPI bloque P=6 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0019 s
+Tareas A+B (rank 0):     0.0060 s
+Par mas cercano (rank0): 0.8672 s  (min 0.1064 / max 0.8672 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.8751 s
+Desequilibrio (max/min computo): 8.15
+CSV,bloque,6,100000,0.875083,0.001890,0.867198,0.106406,0.000018,0.000408
+>>> MPI ciclico P=6 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0022 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 0.5504 s  (min 0.5504 / max 0.6062 entre procesos)
+Reduce + espera:         0.0524 s
+TOTAL (sin generacion):  0.6103 s
+Desequilibrio (max/min computo): 1.10
+CSV,ciclico,6,100000,0.610288,0.002234,0.606207,0.550365,0.052429,0.000408
+>>> MPI bloque P=8 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0048 s
+Tareas A+B (rank 0):     0.0058 s
+Par mas cercano (rank0): 0.7605 s  (min 0.0630 / max 0.7605 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.7712 s
+Desequilibrio (max/min computo): 12.08
+CSV,bloque,8,100000,0.771164,0.004782,0.760537,0.062974,0.000015,0.000408
+>>> MPI ciclico P=8 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0055 s
+Tareas A+B (rank 0):     0.0058 s
+Par mas cercano (rank0): 0.5175 s  (min 0.5086 / max 0.5686 entre procesos)
+Reduce + espera:         0.0453 s
+TOTAL (sin generacion):  0.5741 s
+Desequilibrio (max/min computo): 1.12
+CSV,ciclico,8,100000,0.574129,0.005508,0.568604,0.508612,0.045252,0.000408
+>>> MPI bloque P=10 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0054 s
+Tareas A+B (rank 0):     0.0058 s
+Par mas cercano (rank0): 0.6872 s  (min 0.0450 / max 0.6872 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.6983 s
+Desequilibrio (max/min computo): 15.28
+CSV,bloque,10,100000,0.698332,0.005368,0.687169,0.044962,0.000014,0.000408
+>>> MPI ciclico P=10 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0058 s
+Tareas A+B (rank 0):     0.0059 s
+Par mas cercano (rank0): 0.4919 s  (min 0.4829 / max 0.5505 entre procesos)
+Reduce + espera:         0.0527 s
+TOTAL (sin generacion):  0.5563 s
+Desequilibrio (max/min computo): 1.14
+CSV,ciclico,10,100000,0.556252,0.005753,0.550502,0.482939,0.052710,0.000408
+>>> secuencial n=100000
+=== Deteccion de obstaculo LIDAR ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos ---
+Generacion nube:        0.0033 s
+Centroide + bbox:       0.0001 s
+Orden por profundidad:  0.0050 s
+Par mas cercano:        2.4929 s
+TOTAL (sin generacion): 2.4980 s
+CSV,secuencial,1,100000,2.497957,0,2.492859,2.492859,0,0.000408
+>>> MPI bloque P=2 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 1.9120 s  (min 0.6313 / max 1.9120 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.9187 s
+Desequilibrio (max/min computo): 3.03
+CSV,bloque,2,100000,1.918720,0.001405,1.912043,0.631344,0.000021,0.000408
+>>> MPI ciclico P=2 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0017 s
+Tareas A+B (rank 0):     0.0052 s
+Par mas cercano (rank0): 1.2698 s  (min 1.2698 / max 1.2700 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.2767 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,2,100000,1.276746,0.001678,1.269993,1.269827,0.000013,0.000408
+>>> MPI bloque P=3 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0020 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 1.4628 s  (min 0.2829 / max 1.4628 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.4701 s
+Desequilibrio (max/min computo): 5.17
+CSV,bloque,3,100000,1.470069,0.002033,1.462766,0.282942,0.000019,0.000408
+>>> MPI ciclico P=3 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0015 s
+Tareas A+B (rank 0):     0.0056 s
+Par mas cercano (rank0): 0.8702 s  (min 0.8678 / max 0.8702 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.8773 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,3,100000,0.877328,0.001496,0.870247,0.867838,0.000031,0.000408
+>>> MPI bloque P=4 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0053 s
+Par mas cercano (rank0): 1.1711 s  (min 0.1778 / max 1.1711 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  1.1778 s
+Desequilibrio (max/min computo): 6.59
+CSV,bloque,4,100000,1.177849,0.001424,1.171123,0.177810,0.000020,0.000408
+>>> MPI ciclico P=4 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0057 s
+Par mas cercano (rank0): 0.7220 s  (min 0.7184 / max 0.7280 entre procesos)
+Reduce + espera:         0.0014 s
+TOTAL (sin generacion):  0.7307 s
+Desequilibrio (max/min computo): 1.01
+CSV,ciclico,4,100000,0.730665,0.001602,0.727952,0.718449,0.001372,0.000408
+>>> MPI bloque P=6 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0001 s
+Tareas A+B (rank 0):     0.0058 s
+Par mas cercano (rank0): 0.8953 s  (min 0.1172 / max 0.8953 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.9012 s
+Desequilibrio (max/min computo): 7.64
+CSV,bloque,6,100000,0.901205,0.000127,0.895255,0.117245,0.000037,0.000408
+>>> MPI ciclico P=6 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0059 s
+Par mas cercano (rank0): 0.6264 s  (min 0.5923 / max 0.6320 entre procesos)
+Reduce + espera:         0.0031 s
+TOTAL (sin generacion):  0.6371 s
+Desequilibrio (max/min computo): 1.07
+CSV,ciclico,6,100000,0.637075,0.001597,0.631980,0.592257,0.003118,0.000408
+>>> MPI bloque P=8 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0047 s
+Tareas A+B (rank 0):     0.0103 s
+Par mas cercano (rank0): 0.7842 s  (min 0.0613 / max 0.7842 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.7992 s
+Desequilibrio (max/min computo): 12.79
+CSV,bloque,8,100000,0.799240,0.004689,0.784222,0.061306,0.000014,0.000408
+>>> MPI ciclico P=8 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0059 s
+Tareas A+B (rank 0):     0.0061 s
+Par mas cercano (rank0): 0.5106 s  (min 0.5106 / max 0.5610 entre procesos)
+Reduce + espera:         0.0443 s
+TOTAL (sin generacion):  0.5668 s
+Desequilibrio (max/min computo): 1.10
+CSV,ciclico,8,100000,0.566821,0.005896,0.561013,0.510558,0.044250,0.000408
+>>> MPI bloque P=10 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto bloque) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0071 s
+Tareas A+B (rank 0):     0.0113 s
+Par mas cercano (rank0): 0.6757 s  (min 0.0530 / max 0.6757 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  0.6941 s
+Desequilibrio (max/min computo): 12.75
+CSV,bloque,10,100000,0.694059,0.007071,0.675718,0.052996,0.000013,0.000408
+>>> MPI ciclico P=10 n=100000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto ciclico) ===
+Puntos analizados: 100000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.30 m, profundidad=3.88 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0061 s
+Tareas A+B (rank 0):     0.0059 s
+Par mas cercano (rank0): 0.5398 s  (min 0.4477 / max 0.5633 entre procesos)
+Reduce + espera:         0.0176 s
+TOTAL (sin generacion):  0.5694 s
+Desequilibrio (max/min computo): 1.26
+CSV,ciclico,10,100000,0.569444,0.006098,0.563294,0.447656,0.017639,0.000408
+>>> secuencial n=200000
+=== Deteccion de obstaculo LIDAR ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos ---
+Generacion nube:        0.0067 s
+Centroide + bbox:       0.0003 s
+Orden por profundidad:  0.0108 s
+Par mas cercano:        9.9800 s
+TOTAL (sin generacion): 9.9911 s
+CSV,secuencial,1,200000,9.991066,0,9.980047,9.980047,0,0.000370
+>>> MPI bloque P=2 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0113 s
+Par mas cercano (rank0): 7.7000 s  (min 2.5157 / max 7.7000 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  7.7128 s
+Desequilibrio (max/min computo): 3.06
+CSV,bloque,2,200000,7.712799,0.001448,7.699971,2.515722,0.000033,0.000370
+>>> MPI ciclico P=2 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0174 s
+Tareas A+B (rank 0):     0.0135 s
+Par mas cercano (rank0): 6.4899 s  (min 6.4824 / max 6.4899 entre procesos)
+Reduce + espera:         0.0001 s
+TOTAL (sin generacion):  6.5209 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,2,200000,6.520896,0.017434,6.489900,6.482393,0.000080,0.000370
+>>> MPI bloque P=3 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0024 s
+Tareas A+B (rank 0):     0.0123 s
+Par mas cercano (rank0): 6.4664 s  (min 1.4018 / max 6.4664 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  6.4812 s
+Desequilibrio (max/min computo): 4.61
+CSV,bloque,3,200000,6.481191,0.002447,6.466409,1.401794,0.000033,0.000370
+>>> MPI ciclico P=3 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0023 s
+Tareas A+B (rank 0):     0.0116 s
+Par mas cercano (rank0): 3.9919 s  (min 3.9919 / max 3.9949 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  4.0059 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,3,200000,4.005940,0.002329,3.994945,3.991941,0.000041,0.000370
+>>> MPI bloque P=4 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0015 s
+Tareas A+B (rank 0):     0.0114 s
+Par mas cercano (rank0): 4.9120 s  (min 0.7682 / max 4.9120 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  4.9249 s
+Desequilibrio (max/min computo): 6.39
+CSV,bloque,4,200000,4.924933,0.001495,4.911974,0.768236,0.000028,0.000370
+>>> MPI ciclico P=4 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0114 s
+Par mas cercano (rank0): 3.1944 s  (min 3.1759 / max 3.2004 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  3.2074 s
+Desequilibrio (max/min computo): 1.01
+CSV,ciclico,4,200000,3.207400,0.001551,3.200372,3.175877,0.000040,0.000370
+>>> MPI bloque P=6 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0015 s
+Tareas A+B (rank 0):     0.0128 s
+Par mas cercano (rank0): 3.7995 s  (min 0.4270 / max 3.7995 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  3.8138 s
+Desequilibrio (max/min computo): 8.90
+CSV,bloque,6,200000,3.813774,0.001496,3.799468,0.427008,0.000040,0.000370
+>>> MPI ciclico P=6 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0013 s
+Tareas A+B (rank 0):     0.0128 s
+Par mas cercano (rank0): 2.8886 s  (min 2.8491 / max 2.9118 entre procesos)
+Reduce + espera:         0.0145 s
+TOTAL (sin generacion):  2.9171 s
+Desequilibrio (max/min computo): 1.02
+CSV,ciclico,6,200000,2.917120,0.001294,2.911769,2.849079,0.014499,0.000370
+>>> MPI bloque P=8 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0090 s
+Tareas A+B (rank 0):     0.0123 s
+Par mas cercano (rank0): 3.4325 s  (min 0.3021 / max 3.4325 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  3.4539 s
+Desequilibrio (max/min computo): 11.36
+CSV,bloque,8,200000,3.453850,0.009046,3.432525,0.302076,0.000027,0.000370
+>>> MPI ciclico P=8 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0056 s
+Tareas A+B (rank 0):     0.0129 s
+Par mas cercano (rank0): 2.6231 s  (min 2.5782 / max 2.6411 entre procesos)
+Reduce + espera:         0.0051 s
+TOTAL (sin generacion):  2.6467 s
+Desequilibrio (max/min computo): 1.02
+CSV,ciclico,8,200000,2.646704,0.005622,2.641106,2.578239,0.005092,0.000370
+>>> MPI bloque P=10 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0077 s
+Tareas A+B (rank 0):     0.0163 s
+Par mas cercano (rank0): 3.1242 s  (min 0.2411 / max 3.1242 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  3.1482 s
+Desequilibrio (max/min computo): 12.96
+CSV,bloque,10,200000,3.148166,0.007673,3.124210,0.241149,0.000016,0.000370
+>>> MPI ciclico P=10 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0080 s
+Tareas A+B (rank 0):     0.0155 s
+Par mas cercano (rank0): 2.5442 s  (min 2.5442 / max 2.8351 entre procesos)
+Reduce + espera:         0.2754 s
+TOTAL (sin generacion):  2.8431 s
+Desequilibrio (max/min computo): 1.11
+CSV,ciclico,10,200000,2.843082,0.008010,2.835133,2.544247,0.275362,0.000370
+>>> secuencial n=200000
+=== Deteccion de obstaculo LIDAR ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos ---
+Generacion nube:        0.0083 s
+Centroide + bbox:       0.0004 s
+Orden por profundidad:  0.0122 s
+Par mas cercano:        10.2130 s
+TOTAL (sin generacion): 10.2256 s
+CSV,secuencial,1,200000,10.225596,0,10.213043,10.213043,0,0.000370
+>>> MPI bloque P=2 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0007 s
+Tareas A+B (rank 0):     0.0114 s
+Par mas cercano (rank0): 8.3375 s  (min 3.1307 / max 8.3375 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  8.3496 s
+Desequilibrio (max/min computo): 2.66
+CSV,bloque,2,200000,8.349622,0.000684,8.337524,3.130660,0.000026,0.000370
+>>> MPI ciclico P=2 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0017 s
+Tareas A+B (rank 0):     0.0113 s
+Par mas cercano (rank0): 5.2530 s  (min 5.2478 / max 5.2530 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  5.2660 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,2,200000,5.266049,0.001727,5.252953,5.247844,0.000021,0.000370
+>>> MPI bloque P=3 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0113 s
+Par mas cercano (rank0): 6.1953 s  (min 1.3022 / max 6.1953 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  6.2081 s
+Desequilibrio (max/min computo): 4.76
+CSV,bloque,3,200000,6.208073,0.001400,6.195312,1.302186,0.000044,0.000370
+>>> MPI ciclico P=3 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0128 s
+Par mas cercano (rank0): 4.8005 s  (min 4.7839 / max 4.8137 entre procesos)
+Reduce + espera:         0.0004 s
+TOTAL (sin generacion):  4.8153 s
+Desequilibrio (max/min computo): 1.01
+CSV,ciclico,3,200000,4.815297,0.001606,4.813675,4.783892,0.000407,0.000370
+>>> MPI bloque P=4 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0020 s
+Tareas A+B (rank 0):     0.0114 s
+Par mas cercano (rank0): 5.7000 s  (min 1.1140 / max 5.7000 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  5.7135 s
+Desequilibrio (max/min computo): 5.12
+CSV,bloque,4,200000,5.713485,0.002035,5.700006,1.113977,0.000039,0.000370
+>>> MPI ciclico P=4 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0022 s
+Tareas A+B (rank 0):     0.0114 s
+Par mas cercano (rank0): 3.2477 s  (min 3.2412 / max 3.2477 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  3.2613 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,4,200000,3.261299,0.002185,3.247734,3.241182,0.000025,0.000370
+>>> MPI bloque P=6 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0116 s
+Par mas cercano (rank0): 3.9993 s  (min 0.4324 / max 3.9993 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  4.0125 s
+Desequilibrio (max/min computo): 9.25
+CSV,bloque,6,200000,4.012549,0.001560,3.999323,0.432352,0.000017,0.000370
+>>> MPI ciclico P=6 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0009 s
+Tareas A+B (rank 0):     0.0129 s
+Par mas cercano (rank0): 2.8469 s  (min 2.8397 / max 2.8997 entre procesos)
+Reduce + espera:         0.0421 s
+TOTAL (sin generacion):  2.9028 s
+Desequilibrio (max/min computo): 1.02
+CSV,ciclico,6,200000,2.902793,0.000922,2.899690,2.839707,0.042134,0.000370
+>>> MPI bloque P=8 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0060 s
+Tareas A+B (rank 0):     0.0126 s
+Par mas cercano (rank0): 3.5248 s  (min 0.2803 / max 3.5248 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  3.5434 s
+Desequilibrio (max/min computo): 12.58
+CSV,bloque,8,200000,3.543406,0.005993,3.524799,0.280273,0.000043,0.000370
+>>> MPI ciclico P=8 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0058 s
+Tareas A+B (rank 0):     0.0121 s
+Par mas cercano (rank0): 2.8008 s  (min 2.7304 / max 2.8216 entre procesos)
+Reduce + espera:         0.0088 s
+TOTAL (sin generacion):  2.8274 s
+Desequilibrio (max/min computo): 1.03
+CSV,ciclico,8,200000,2.827400,0.005765,2.821598,2.730411,0.008751,0.000370
+>>> MPI bloque P=10 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0129 s
+Tareas A+B (rank 0):     0.0167 s
+Par mas cercano (rank0): 3.3706 s  (min 0.2358 / max 3.3706 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  3.4003 s
+Desequilibrio (max/min computo): 14.30
+CSV,bloque,10,200000,3.400297,0.012935,3.370635,0.235779,0.000027,0.000370
+>>> MPI ciclico P=10 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0061 s
+Tareas A+B (rank 0):     0.0128 s
+Par mas cercano (rank0): 2.9349 s  (min 2.9349 / max 3.1594 entre procesos)
+Reduce + espera:         0.2114 s
+TOTAL (sin generacion):  3.1652 s
+Desequilibrio (max/min computo): 1.08
+CSV,ciclico,10,200000,3.165210,0.006111,3.159414,2.934897,0.211450,0.000370
+>>> secuencial n=200000
+=== Deteccion de obstaculo LIDAR ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos ---
+Generacion nube:        0.0093 s
+Centroide + bbox:       0.0004 s
+Orden por profundidad:  0.0125 s
+Par mas cercano:        10.5088 s
+TOTAL (sin generacion): 10.5216 s
+CSV,secuencial,1,200000,10.521589,0,10.508766,10.508766,0,0.000370
+>>> MPI bloque P=2 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0010 s
+Tareas A+B (rank 0):     0.0111 s
+Par mas cercano (rank0): 7.8408 s  (min 2.6954 / max 7.8408 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  7.8530 s
+Desequilibrio (max/min computo): 2.91
+CSV,bloque,2,200000,7.852977,0.001026,7.840797,2.695420,0.000020,0.000370
+>>> MPI ciclico P=2 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 2 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0019 s
+Tareas A+B (rank 0):     0.0111 s
+Par mas cercano (rank0): 5.3697 s  (min 5.3688 / max 5.3697 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  5.3827 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,2,200000,5.382738,0.001868,5.369720,5.368804,0.000014,0.000370
+>>> MPI bloque P=3 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0012 s
+Tareas A+B (rank 0):     0.0119 s
+Par mas cercano (rank0): 6.2704 s  (min 1.3577 / max 6.2704 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  6.2835 s
+Desequilibrio (max/min computo): 4.62
+CSV,bloque,3,200000,6.283539,0.001209,6.270448,1.357716,0.000024,0.000370
+>>> MPI ciclico P=3 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 3 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0020 s
+Tareas A+B (rank 0):     0.0115 s
+Par mas cercano (rank0): 4.2521 s  (min 4.2482 / max 4.2558 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  4.2657 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,3,200000,4.265662,0.002036,4.255839,4.248237,0.000032,0.000370
+>>> MPI bloque P=4 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0021 s
+Tareas A+B (rank 0):     0.0115 s
+Par mas cercano (rank0): 5.2764 s  (min 0.8322 / max 5.2764 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  5.2900 s
+Desequilibrio (max/min computo): 6.34
+CSV,bloque,4,200000,5.290029,0.002144,5.276393,0.832151,0.000021,0.000370
+>>> MPI ciclico P=4 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 4 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0014 s
+Tareas A+B (rank 0):     0.0116 s
+Par mas cercano (rank0): 3.4006 s  (min 3.3890 / max 3.4029 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  3.4136 s
+Desequilibrio (max/min computo): 1.00
+CSV,ciclico,4,200000,3.413601,0.001401,3.402937,3.389024,0.000028,0.000370
+>>> MPI bloque P=6 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0117 s
+Par mas cercano (rank0): 4.2449 s  (min 0.4874 / max 4.2449 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  4.2581 s
+Desequilibrio (max/min computo): 8.71
+CSV,bloque,6,200000,4.258119,0.001567,4.244869,0.487381,0.000022,0.000370
+>>> MPI ciclico P=6 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 6 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0016 s
+Tareas A+B (rank 0):     0.0131 s
+Par mas cercano (rank0): 3.2765 s  (min 3.2578 / max 3.3399 entre procesos)
+Reduce + espera:         0.0556 s
+TOTAL (sin generacion):  3.3469 s
+Desequilibrio (max/min computo): 1.03
+CSV,ciclico,6,200000,3.346904,0.001645,3.339858,3.257840,0.055595,0.000370
+>>> MPI bloque P=8 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0067 s
+Tareas A+B (rank 0):     0.0140 s
+Par mas cercano (rank0): 3.7012 s  (min 0.3539 / max 3.7012 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  3.7219 s
+Desequilibrio (max/min computo): 10.46
+CSV,bloque,8,200000,3.721907,0.006741,3.701161,0.353902,0.000021,0.000370
+>>> MPI ciclico P=8 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 8 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0059 s
+Tareas A+B (rank 0):     0.0125 s
+Par mas cercano (rank0): 2.9511 s  (min 2.8675 / max 2.9511 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  2.9695 s
+Desequilibrio (max/min computo): 1.03
+CSV,ciclico,8,200000,2.969516,0.005916,2.951096,2.867517,0.000014,0.000370
+>>> MPI bloque P=10 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto bloque) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0177 s
+Tareas A+B (rank 0):     0.0168 s
+Par mas cercano (rank0): 3.4626 s  (min 0.2160 / max 3.4626 entre procesos)
+Reduce + espera:         0.0000 s
+TOTAL (sin generacion):  3.4972 s
+Desequilibrio (max/min computo): 16.03
+CSV,bloque,10,200000,3.497161,0.017716,3.462632,0.215993,0.000035,0.000370
+>>> MPI ciclico P=10 n=200000
+=== Deteccion de obstaculo LIDAR (MPI, 10 procesos, reparto ciclico) ===
+Puntos analizados: 200000
+Centroide: (0.00, 1.00, 15.00) m
+Bounding box: ancho=13.50 m, alto=6.55 m, profundidad=4.19 m
+Punto mas cercano al parachoques: 12.98 m
+Distancia minima entre puntos: 0.0004 m -> objeto SOLIDO (frenar)
+
+--- Tiempos (MPI_Wtime) ---
+Bcast nube:              0.0065 s
+Tareas A+B (rank 0):     0.0151 s
+Par mas cercano (rank0): 2.8724 s  (min 2.8451 / max 3.1282 entre procesos)
+Reduce + espera:         0.2406 s
+TOTAL (sin generacion):  3.1346 s
+Desequilibrio (max/min computo): 1.10
+CSV,ciclico,10,200000,3.134639,0.006548,3.128163,2.845096,0.240559,0.000370
